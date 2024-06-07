@@ -1,0 +1,11 @@
+{{ define "main" }}
+  {{ $sections := where .Site.RegularPages "Type" "section" }}
+  {{ range $sections }}
+    <section id="{{ .File.BaseFileName }}">
+      <div class="container">
+        <h2>{{ .Title }}</h2>
+        {{ .Content }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}
