@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden !important;
+    scroll-behavior: smooth !important;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    html {
+        overflow-x: hidden !important; /* Prevents horizontal scrolling */
+        scroll-behavior: smooth !important; /* Ensures smooth scrolling */
+    }
+}
+.material-symbols-outlined {
+     font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+      }
+.active{
+transform: translateX(0) !important;
+}
+
+section .content p img {
+    max-width: 100%;
+}
+
+section blockquote p,
+section blockquote ul {
+    font-style: italic;
+    margin-left: 10px;
+    font-size: 0.9rem;
+}

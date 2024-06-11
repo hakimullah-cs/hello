@@ -1,0 +1,66 @@
+<style>
+    .menu{
+       transform: translateX(100%);
+       -webkit-transform: translateX(100%);
+       -webkit-transition: -webkit-transform 0.23s ease-in-out;
+       transition: transform 0.23s ease-in-out !important;
+    }
+    .menu li{
+        margin-bottom: 1rem !important;
+    }
+    .menu li a{
+        color: #000 !important;
+    }
+    .menu.active{
+       transform: translateX(0);
+       -webkit-transform: translateX(0);
+    }
+   
+   </style>
+   <header style="min-height: 30vh; background-color: yellow;">
+         <img src="./images/menu.png" alt="menuIcon" id="menuIcon" style="position: absolute; top: 10px; right: 10px; width: 2rem; height: 2rem;">
+        <!-- <h3 id="menuIcon" style="position: absolute; top: 5px; right: 5px; color: #000; font-size: 3rem;">icon</h3> -->
+        <div class="row justify-content-center align-items-end" style="height: 300px ;">
+           <nav id="menu" class="menu col-md-4 position-absolute text-end" style="right: 0; top: 0; background-color: #F8F9F9;">
+               <img src="./images/close.png" alt="close" id="close" class="fs-1 text-dark" style="width: 2rem; height: 2rem;" />
+               <ul style="list-style: none;" class="mt-5">
+                   {{ range sort .Site.RegularPages "Params.weight" }}
+                       <li class="mb-2 text-start"><a href="#{{ .File.BaseFileName }}" class="text-decoration-none text-dark fw-bold">{{ .Title }}</a></li>
+                   {{ end }}
+               </ul>
+           </nav>
+           <div class="col-md-5 col-10 border border-danger header-image">
+               <img src="./images/Header.png" alt="header-image" class="img-fluid">
+           </div>
+        </div>
+        <div style="background: #87877c; min-height: auto;" class="container-fluid py-3">
+           <div class="row justify-content-center">
+               <div class='col-md-8 col-12 d-flex flex-md-nowrap flex-wrap p-md-0 p-2 gap-2'>
+   
+                   <div class='col-md-2 col-12 image' >
+                       <img src='images/cizinsky_intro.png' alt='Cizinsky_image' class="img-fluid" />
+                   </div>
+                   <div class='col-md-10 col-12 '>
+                           <p class='mb-2 pb-2' style="color: yellow; font-size:20px; font-weight:bold; line-height: 26px;">
+                               Milí sousedé.
+                               <br>
+                               jsme jedni z vás a máme rádi svoji Prahu 7. Stejně tak jsme fandové i našeho starosty, Jendy Čižinského. Nicméně během jeho několikaletého působení v čele naší městské části se postupně objevují další a další rozporuplné informace, které nás naplňují znepokojením.
+                           </p>
+                           <hr style="border:3px solid yellow; opacity: 1;">   
+                           <p class='mb-2' style=" color:white; font-size:17px; font-weight:550;">
+                               Protože je těchto už skoro šokujících informací kolem Jendy Čižinského tolik, rozhodli jsme se vydat časopis a spustit tento web. Zde najdete shrnutí většiny Jendy kauz.
+                           </p>
+                           <p class='mb-2' style='padding-top:10px; font-size:15px; color:white; text-align:justify;'>
+                               Náš starosta Prahy 7, pan Jenda Čižinský, nyní odstoupil z funkce předsedy hnutí Praha Sobě a jmenoval místo sebe Adama Scheinherra. Údajně proto, že je pan starosta aktuálně vyšetřován elitním celostátním útvarem policie a nechce těmito svými problémy zatížit hnutí. Adam Scheinherr se kvůli nové funkci i ostříhal na radu nově najatého superdrahého poradce Michala Repy. Rada zněla: vypadat jako intelektuál. I když panu starostovi budou jeho mediální poradci radit, ať celý náš soubor dotazů označí za pamflet, věříme, že pan starosta Prahy 7 a pražský zastupitel Jenda Čižinský bude chtít ve vlastním zájmu odpovědět na tato jasná a nezpochybnitelná fakta Děkujeme.
+                           </p>
+                          
+                           <p style='font-size:15px; color:white;'>
+                               Všechny dotazy Jendo považujte za dotazy podle zákona 106/1999 o svobodném přístupu k informacím. Jako odpověď prosím použijte například Vámi tolik využívaný Facebook.
+                           </p>
+                     
+                   </div>
+               </div>
+           </div>
+        </div>
+   </header>
+   

@@ -1,0 +1,4 @@
+baseURL = 'https://example.org/'
+languageCode = 'cs-cz'
+title = 'Pod pokličkou'
+theme = "ananke"
